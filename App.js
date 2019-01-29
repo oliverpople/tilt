@@ -31,7 +31,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.container} opacity={1 + this.state.z}>
         <Text style={styles.headline}>Accelerometer values</Text>
         <Value name="x" value={this.state.x} />
         <Value name="y" value={this.state.y} />
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "white"
   },
   headline: {
     fontSize: 30,
@@ -65,10 +65,5 @@ const styles = StyleSheet.create({
     width: 50,
     fontSize: 20,
     fontWeight: "bold"
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
   }
 });
