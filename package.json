@@ -10,8 +10,9 @@
     "i": "^0.3.6",
     "npm": "^6.7.0",
     "react": "16.6.3",
-    "react-native": "0.58.1",
+    "react-native": "^0.58.3",
     "react-native-sensors": "^5.1.5",
+    "react-native-system-setting": "^1.7.1",
     "rxjs": "^6.3.3"
   },
   "devDependencies": {

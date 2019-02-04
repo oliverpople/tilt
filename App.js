@@ -5,6 +5,7 @@ import {
   SensorTypes,
   accelerometer
 } from "react-native-sensors";
+import SystemSetting from "react-native-system-setting";
 
 const Value = ({ name, value }) => (
   <View style={styles.valueContainer}>
@@ -29,13 +30,22 @@ export default class App extends Component {
     this.state = { x: 0, y: 0, z: 0 };
   }
 
+  setScreenBrightness() {
+    const { z } = this.state;
+    SystemSetting.setAppBrightness(1 + z);
+  }
+
   render() {
+    const { x, y, z } = this.state;
+    const { container, headline } = styles;
+
     return (
-      <View style={styles.container} opacity={1 + this.state.z}>
-        <Text style={styles.headline}>Accelerometer values</Text>
-        <Value name="x" value={this.state.x} />
-        <Value name="y" value={this.state.y} />
-        <Value name="z" value={this.state.z} />
+      <View style={container}>
+        <Text style={headline}>Accelerometer values</Text>
+        <Value name="x" value={x} />
+        <Value name="y" value={y} />
+        <Value name="z" value={z} />
+        {this.setScreenBrightness()}
       </View>
     );
   }
