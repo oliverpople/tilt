@@ -1,15 +1,8 @@
-/**
- * @format
- * @lint-ignore-every XPLATJSCOPYRIGHT1
- */
+import "react-native";
+import React from "react";
+import App from "../App";
+import renderer from "react-test-renderer";
 
-import 'react-native';
-import React from 'react';
-import App from '../App';
-
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
-it('renders correctly', () => {
+it("App component renders", () => {
   renderer.create(<App />);
 });
