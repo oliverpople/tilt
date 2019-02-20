@@ -1,8 +1,24 @@
 import "react-native";
 import React from "react";
 import App from "../App";
+import { shallow } from "enzyme";
+import Enzyme from "enzyme"; // remove repitition
+import Adapter from "enzyme-adapter-react-16";
 import renderer from "react-test-renderer";
 
-it("App component renders", () => {
-  renderer.create(<App />);
+Enzyme.configure({ adapter: new Adapter() });
+
+describe("App component", () => {
+  it("renders", () => {
+    renderer.create(<App />);
+  });
+
+  it("has a function for getting accelerometer data", () => {
+    const wrapper = shallow(<App />);
+    const instance = wrapper.instance();
+    jest.spyOn(instance, "getAccelerometerData");
+    instance.getAccelerometerData();
+    expect(instance.getAccelerometerData).toBeDefined();
+    expect(instance.getAccelerometerData).toHaveBeenCalled();
+  });
 });

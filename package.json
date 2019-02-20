@@ -7,9 +7,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "i": "^0.3.6",
     "npm": "^6.7.0",
     "react": "16.6.3",
+    "react-dom": "^16.8.2",
     "react-native": "^0.58.4",
     "react-native-sensors": "^5.1.5",
     "react-native-system-setting": "^1.7.1",

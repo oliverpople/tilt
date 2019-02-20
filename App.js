@@ -6,6 +6,10 @@ export default class App extends Component {
     super(props);
   }
 
+  getAccelerometerData() {
+    return true;
+  }
+
   render() {
     return <View />;
   }
