@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { accelerometerObservable } from "./accelerometerObservable.js";
+import { accelerometerObservable } from "../accelerometerObservable.js";
 import SystemSetting from "react-native-system-setting";
 
 const Value = ({ name, value }) => (

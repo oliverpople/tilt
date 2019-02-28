@@ -1,6 +1,6 @@
 import "react-native";
 import React from "react";
-import App from "../App";
+import App from "../src/components/App";
 import { shallow } from "enzyme";
 import Enzyme from "enzyme"; // remove repitition
 import Adapter from "enzyme-adapter-react-16";
@@ -32,5 +32,10 @@ describe("App component", () => {
     expect(instance.getAccelerometerData).toBeDefined();
     instance.getAccelerometerData();
     expect(instance.getAccelerometerData).toHaveBeenCalled();
+  });
+
+  it("Renders Header component", () => {
+    // const wrapper = shallow(<App />);
+    // const instance = wrapper.instance();
   });
 });
