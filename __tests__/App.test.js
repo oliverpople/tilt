@@ -8,6 +8,18 @@ import renderer from "react-test-renderer";
 
 Enzyme.configure({ adapter: new Adapter() });
 
+jest.mock("react-native-sensors", () => {
+  return {
+    accelerometerObservable: jest.fn()
+  };
+});
+jest.mock("react-native-system-setting", () => {
+  return {
+    SystemSetting: {},
+    setAppBrightness: jest.fn()
+  };
+});
+
 describe("App component", () => {
   it("renders", () => {
     renderer.create(<App />);
@@ -17,9 +29,8 @@ describe("App component", () => {
     const wrapper = shallow(<App />);
     const instance = wrapper.instance();
     jest.spyOn(instance, "getAccelerometerData");
-    // need to mock accelerometerData
-    // instance.getAccelerometerData();
     expect(instance.getAccelerometerData).toBeDefined();
+    instance.getAccelerometerData();
     expect(instance.getAccelerometerData).toHaveBeenCalled();
   });
 });
