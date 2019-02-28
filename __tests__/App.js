@@ -13,11 +13,11 @@ describe("App component", () => {
     renderer.create(<App />);
   });
 
-  it("has a function for getting accelerometer data", () => {
+  it("calls a function for getting accelerometer data", () => {
     const wrapper = shallow(<App />);
     const instance = wrapper.instance();
     jest.spyOn(instance, "getAccelerometerData");
-    instance.getAccelerometerData();
+    // instance.getAccelerometerData();
     expect(instance.getAccelerometerData).toBeDefined();
     expect(instance.getAccelerometerData).toHaveBeenCalled();
   });
