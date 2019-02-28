@@ -17,6 +17,7 @@ describe("App component", () => {
     const wrapper = shallow(<App />);
     const instance = wrapper.instance();
     jest.spyOn(instance, "getAccelerometerData");
+    // need to mock accelerometerData
     // instance.getAccelerometerData();
     expect(instance.getAccelerometerData).toBeDefined();
     expect(instance.getAccelerometerData).toHaveBeenCalled();
