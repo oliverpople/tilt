@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import {
-  setUpdateIntervalForType,
-  SensorTypes,
-  accelerometer
-} from "react-native-sensors";
+import { accelerometerObservable } from "../accelerometerObservable.js";
+import SystemSetting from "react-native-system-setting";
+import Header from "./Header.js";
 
 const Value = ({ name, value }) => (
   <View style={styles.valueContainer}>
@@ -17,25 +15,37 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    setUpdateIntervalForType(SensorTypes.accelerometer, 150);
+    this.getAccelerometerData(accelerometerObservable);
 
-    accelerometer.subscribe(({ x, y, z }) => {
-      this.setState({ x, y, z }),
+    this.state = { z: 0 };
+  }
+
+  async getAccelerometerData(accelerometerObs) {
+    const accelerometer = await accelerometerObs();
+
+    accelerometer.subscribe(({ z }) => {
+      this.setState({ z }),
         error => {
           console.log("The sensor is not available");
         };
     });
+  }
 
-    this.state = { x: 0, y: 0, z: 0 };
+  setScreenBrightness() {
+    const { z } = this.state;
+    SystemSetting.setAppBrightness(1 + z);
   }
 
   render() {
+    const { z } = this.state;
+    const { container, headline } = styles;
+
     return (
-      <View style={styles.container} opacity={1 + this.state.z}>
-        <Text style={styles.headline}>Accelerometer values</Text>
-        <Value name="x" value={this.state.x} />
-        <Value name="y" value={this.state.y} />
-        <Value name="z" value={this.state.z} />
+      <View style={container}>
+        <Header headerText="Tilt" />
+        <Text style={headline}>Accelerometer values</Text>
+        <Value name="z" value={z} />
+        {this.setScreenBrightness()}
       </View>
     );
   }

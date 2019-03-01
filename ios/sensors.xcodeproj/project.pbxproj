@@ -37,7 +37,9 @@
 		2DCD954D1E0B4F2C00145EB5 /* sensorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* sensorsTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		86C6458F5506471AAE256E10 /* libRCTSystemSetting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAA01D220D0438F930CA45F /* libRCTSystemSetting.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		C0DBF58D728A4109980AF68F /* libRNSensors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 028435EC0A174BF2A0A537BB /* libRNSensors.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -281,33 +283,47 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
-		84468BB52205309600D97FF4 /* PBXContainerItemProxy */ = {
+		849E0F232229A5E800F0EE2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EDEBC6D6214B3E7000DD5AC8;
 			remoteInfo = jsi;
 		};
-		84468BB72205309600D97FF4 /* PBXContainerItemProxy */ = {
+		849E0F252229A5E800F0EE2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EDEBC73B214B45A300DD5AC8;
 			remoteInfo = jsiexecutor;
 		};
-		84468BB92205309600D97FF4 /* PBXContainerItemProxy */ = {
+		849E0F272229A5E800F0EE2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ED296FB6214C9A0900B7C4FE;
 			remoteInfo = "jsi-tvOS";
 		};
-		84468BBB2205309600D97FF4 /* PBXContainerItemProxy */ = {
+		849E0F292229A5E800F0EE2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ED296FEE214C9CF800B7C4FE;
 			remoteInfo = "jsiexecutor-tvOS";
+		};
+		849E0F302229A5EE00F0EE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CC107EF02094F92A0F33505 /* RCTSystemSetting.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 30D12B621EDC0C3A00775BF0;
+			remoteInfo = RCTSystemSetting;
+		};
+		849E0F332229A5EE00F0EE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41E1249A29414E24A10CB806 /* RNSensors.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNSensors;
 		};
 		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -328,6 +344,8 @@
 		00E356EE1AD99517003FC87E /* sensorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sensorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* sensorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sensorsTests.m; sourceTree = "<group>"; };
+		028435EC0A174BF2A0A537BB /* libRNSensors.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSensors.a; sourceTree = "<group>"; };
+		0DAA01D220D0438F930CA45F /* libRCTSystemSetting.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTSystemSetting.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* sensors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensors.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,6 +359,8 @@
 		2D02E47B1E0B4A5D006451C7 /* sensors-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sensors-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* sensors-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sensors-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CC107EF02094F92A0F33505 /* RCTSystemSetting.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTSystemSetting.xcodeproj; path = "../node_modules/react-native-system-setting/ios/RCTSystemSetting.xcodeproj"; sourceTree = "<group>"; };
+		41E1249A29414E24A10CB806 /* RNSensors.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSensors.xcodeproj; path = "../node_modules/react-native-sensors/ios/RNSensors.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -375,6 +395,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				C0DBF58D728A4109980AF68F /* libRNSensors.a in Frameworks */,
+				86C6458F5506471AAE256E10 /* libRCTSystemSetting.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,10 +535,10 @@
 				2DF0FFE52056DD460020B375 /* libthird-party.a */,
 				2DF0FFE72056DD460020B375 /* libdouble-conversion.a */,
 				2DF0FFE92056DD460020B375 /* libdouble-conversion.a */,
-				84468BB62205309600D97FF4 /* libjsi.a */,
-				84468BB82205309600D97FF4 /* libjsiexecutor.a */,
-				84468BBA2205309600D97FF4 /* libjsi-tvOS.a */,
-				84468BBC2205309600D97FF4 /* libjsiexecutor-tvOS.a */,
+				849E0F242229A5E800F0EE2A /* libjsi.a */,
+				849E0F262229A5E800F0EE2A /* libjsiexecutor.a */,
+				849E0F282229A5E800F0EE2A /* libjsi-tvOS.a */,
+				849E0F2A2229A5E800F0EE2A /* libjsiexecutor-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -564,6 +586,8 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				41E1249A29414E24A10CB806 /* RNSensors.xcodeproj */,
+				3CC107EF02094F92A0F33505 /* RCTSystemSetting.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -585,6 +609,7 @@
 				00E356EF1AD99517003FC87E /* sensorsTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				849E0EFD2229A5E400F0EE2A /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -598,6 +623,31 @@
 				00E356EE1AD99517003FC87E /* sensorsTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* sensors-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* sensors-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		849E0EFD2229A5E400F0EE2A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				028435EC0A174BF2A0A537BB /* libRNSensors.a */,
+				0DAA01D220D0438F930CA45F /* libRCTSystemSetting.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		849E0F2B2229A5EE00F0EE2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				849E0F312229A5EE00F0EE2A /* libRCTSystemSetting.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		849E0F2D2229A5EE00F0EE2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				849E0F342229A5EE00F0EE2A /* libRNSensors.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -692,16 +742,16 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2BCPHA2A96;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 2BCPHA2A96;
-						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -759,6 +809,10 @@
 					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
 				},
 				{
+					ProductGroup = 849E0F2B2229A5EE00F0EE2A /* Products */;
+					ProjectRef = 3CC107EF02094F92A0F33505 /* RCTSystemSetting.xcodeproj */;
+				},
+				{
 					ProductGroup = 832341B11AAA6A8300B99B32 /* Products */;
 					ProjectRef = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
 				},
@@ -773,6 +827,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 849E0F2D2229A5EE00F0EE2A /* Products */;
+					ProjectRef = 41E1249A29414E24A10CB806 /* RNSensors.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1010,32 +1068,46 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84468BB62205309600D97FF4 /* libjsi.a */ = {
+		849E0F242229A5E800F0EE2A /* libjsi.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libjsi.a;
-			remoteRef = 84468BB52205309600D97FF4 /* PBXContainerItemProxy */;
+			remoteRef = 849E0F232229A5E800F0EE2A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84468BB82205309600D97FF4 /* libjsiexecutor.a */ = {
+		849E0F262229A5E800F0EE2A /* libjsiexecutor.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libjsiexecutor.a;
-			remoteRef = 84468BB72205309600D97FF4 /* PBXContainerItemProxy */;
+			remoteRef = 849E0F252229A5E800F0EE2A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84468BBA2205309600D97FF4 /* libjsi-tvOS.a */ = {
+		849E0F282229A5E800F0EE2A /* libjsi-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libjsi-tvOS.a";
-			remoteRef = 84468BB92205309600D97FF4 /* PBXContainerItemProxy */;
+			remoteRef = 849E0F272229A5E800F0EE2A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84468BBC2205309600D97FF4 /* libjsiexecutor-tvOS.a */ = {
+		849E0F2A2229A5E800F0EE2A /* libjsiexecutor-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libjsiexecutor-tvOS.a";
-			remoteRef = 84468BBB2205309600D97FF4 /* PBXContainerItemProxy */;
+			remoteRef = 849E0F292229A5E800F0EE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		849E0F312229A5EE00F0EE2A /* libRCTSystemSetting.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTSystemSetting.a;
+			remoteRef = 849E0F302229A5EE00F0EE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		849E0F342229A5EE00F0EE2A /* libRNSensors.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSensors.a;
+			remoteRef = 849E0F332229A5EE00F0EE2A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */ = {
@@ -1179,13 +1251,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2BCPHA2A96;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+				);
 				INFOPLIST_FILE = sensorsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1201,9 +1284,20 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 2BCPHA2A96;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+				);
 				INFOPLIST_FILE = sensorsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1219,10 +1313,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 2BCPHA2A96;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+				);
 				INFOPLIST_FILE = sensors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1232,7 +1331,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tilt.app;
 				PRODUCT_NAME = sensors;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1242,9 +1340,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BCPHA2A96;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+				);
 				INFOPLIST_FILE = sensors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1254,7 +1357,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tilt.app;
 				PRODUCT_NAME = sensors;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1271,8 +1373,18 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+				);
 				INFOPLIST_FILE = "sensors-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1297,8 +1409,18 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+				);
 				INFOPLIST_FILE = "sensors-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1322,8 +1444,18 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+				);
 				INFOPLIST_FILE = "sensors-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1347,8 +1479,18 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-sensors/ios",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+				);
 				INFOPLIST_FILE = "sensors-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
