@@ -6,13 +6,7 @@ import Header from "./Header.js";
 import Card from "./Card.js";
 import Button from "./Button.js";
 import CardSection from "./CardSection.js";
-
-const Value = ({ name, value }) => (
-  <View style={styles.valueContainer}>
-    <Text style={styles.valueName}>{name}:</Text>
-    <Text style={styles.valueValue}>{new String(value).substr(0, 8)}</Text>
-  </View>
-);
+import AccelerometerVisual from "./AccelerometerVisual.js";
 
 export default class App extends Component {
   constructor(props) {
@@ -48,12 +42,14 @@ export default class App extends Component {
   setScreenBrightness() {
     if (this.state.status === "Off") {
       const { z } = this.state;
+
       SystemSetting.setAppBrightness(1 + z);
     }
   }
 
   render() {
     const { z } = this.state;
+    const degrees = z * -90;
     const { container, headline } = styles;
 
     return (
@@ -66,8 +62,7 @@ export default class App extends Component {
             </Button>
           </CardSection>
           <CardSection>
-            <Text style={headline}>Accelerometer values</Text>
-            <Value name="z" value={z} />
+            <AccelerometerVisual title="Current tilt" value={degrees} />
           </CardSection>
         </Card>
         {this.setScreenBrightness()}
@@ -76,27 +71,9 @@ export default class App extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
     backgroundColor: "white"
-  },
-  headline: {
-    fontSize: 30,
-    textAlign: "center",
-    margin: 10
-  },
-  valueContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap"
-  },
-  valueValue: {
-    width: 200,
-    fontSize: 20
-  },
-  valueName: {
-    width: 50,
-    fontSize: 20,
-    fontWeight: "bold"
   }
-});
+};
