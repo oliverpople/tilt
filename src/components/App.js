@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { accelerometerObservable } from "../accelerometerObservable.js";
 import SystemSetting from "react-native-system-setting";
 import Header from "./Header.js";
+import Card from "./Card.js";
 
 const Value = ({ name, value }) => (
   <View style={styles.valueContainer}>
@@ -43,8 +44,10 @@ export default class App extends Component {
     return (
       <View style={container}>
         <Header headerText="Tilt" />
-        <Text style={headline}>Accelerometer values</Text>
-        <Value name="z" value={z} />
+        <Card>
+          <Text style={headline}>Accelerometer values</Text>
+          <Value name="z" value={z} />
+        </Card>
         {this.setScreenBrightness()}
       </View>
     );

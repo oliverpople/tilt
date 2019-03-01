@@ -1,5 +1,5 @@
-import React from 'react';
-import { View } from 'react-native';
+import React from "react";
+import { View } from "react-native";
 
 const Card = props => {
   return <View style={styles.containerStyles}>{props.children}</View>;
@@ -9,9 +9,9 @@ const styles = {
   containerStyles: {
     borderWidth: 1,
     borderRadius: 2,
-    borderColor: '#ddd',
+    borderColor: "#ddd",
     borderBottomWidth: 0,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffSet: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 2,
