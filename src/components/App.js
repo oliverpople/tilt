@@ -4,6 +4,8 @@ import { accelerometerObservable } from "../accelerometerObservable.js";
 import SystemSetting from "react-native-system-setting";
 import Header from "./Header.js";
 import Card from "./Card.js";
+import Button from "./Button.js";
+import CardSection from "./CardSection.js";
 
 const Value = ({ name, value }) => (
   <View style={styles.valueContainer}>
@@ -16,9 +18,11 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
+    SystemSetting.saveBrightness();
+
     this.getAccelerometerData(accelerometerObservable);
 
-    this.state = { z: 0 };
+    this.state = { z: 0, status: "On" };
   }
 
   async getAccelerometerData(accelerometerObs) {
@@ -32,9 +36,20 @@ export default class App extends Component {
     });
   }
 
+  turnOnOffScreenBrightnessSetter() {
+    if (this.state.status === "On") {
+      SystemSetting.restoreBrightness();
+      this.setState({ status: "Off" });
+    } else {
+      this.setState({ status: "On" });
+    }
+  }
+
   setScreenBrightness() {
-    const { z } = this.state;
-    SystemSetting.setAppBrightness(1 + z);
+    if (this.state.status === "Off") {
+      const { z } = this.state;
+      SystemSetting.setAppBrightness(1 + z);
+    }
   }
 
   render() {
@@ -45,8 +60,15 @@ export default class App extends Component {
       <View style={container}>
         <Header headerText="Tilt" />
         <Card>
-          <Text style={headline}>Accelerometer values</Text>
-          <Value name="z" value={z} />
+          <CardSection>
+            <Button onPress={() => this.turnOnOffScreenBrightnessSetter()}>
+              Turn Tilt {this.state.status}
+            </Button>
+          </CardSection>
+          <CardSection>
+            <Text style={headline}>Accelerometer values</Text>
+            <Value name="z" value={z} />
+          </CardSection>
         </Card>
         {this.setScreenBrightness()}
       </View>
