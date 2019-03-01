@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { accelerometerObservable } from "../accelerometerObservable.js";
 import SystemSetting from "react-native-system-setting";
+import Header from "./Header.js";
 
 const Value = ({ name, value }) => (
   <View style={styles.valueContainer}>
@@ -16,14 +17,14 @@ export default class App extends Component {
 
     this.getAccelerometerData(accelerometerObservable);
 
-    this.state = { x: 0, y: 0, z: 0 };
+    this.state = { z: 0 };
   }
 
   async getAccelerometerData(accelerometerObs) {
     const accelerometer = await accelerometerObs();
 
-    accelerometer.subscribe(({ x, y, z }) => {
-      this.setState({ x, y, z }),
+    accelerometer.subscribe(({ z }) => {
+      this.setState({ z }),
         error => {
           console.log("The sensor is not available");
         };
@@ -36,14 +37,13 @@ export default class App extends Component {
   }
 
   render() {
-    const { x, y, z } = this.state;
+    const { z } = this.state;
     const { container, headline } = styles;
 
     return (
       <View style={container}>
+        <Header headerText="Tilt" />
         <Text style={headline}>Accelerometer values</Text>
-        <Value name="x" value={x} />
-        <Value name="y" value={y} />
         <Value name="z" value={z} />
         {this.setScreenBrightness()}
       </View>
