@@ -4,8 +4,7 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.ninty.system.setting.SystemSettingPackage;
-import com.sensors.RNSensorsPackage;
-import com.sensors.RNSensorsPackage;
+import com.tiltapp.RNSensorsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -26,9 +25,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new SystemSettingPackage(),
-            new RNSensorsPackage(),
-            new RNSensorsPackage()
+          new SystemSettingPackage(),
+          new RNSensorsPackage()
       );
     }
 
