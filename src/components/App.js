@@ -42,14 +42,13 @@ export default class App extends Component {
   setScreenBrightness() {
     if (this.state.status === "Off") {
       const { z } = this.state;
-
-      SystemSetting.setAppBrightness(1 + z);
+      SystemSetting.setAppBrightness(1 - z / 10);
     }
   }
 
   render() {
     const { z } = this.state;
-    const degrees = z * -90;
+    const degrees = z * 9;
     const { container, headline } = styles;
 
     return (
