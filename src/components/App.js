@@ -7,6 +7,17 @@ import Card from "./Card.js";
 import Button from "./Button.js";
 import CardSection from "./CardSection.js";
 import AccelerometerVisual from "./AccelerometerVisual.js";
+import BackgroundTask from "react-native-background-task";
+
+BackgroundTask.define(() => {
+  function everySecond() {
+    console.log("Called SystemSetting.setAppBrightness");
+    // SystemSetting.setAppBrightness(0);
+  }
+  everySecond();
+  setInterval(everySecond, 1 * 1000);
+  BackgroundTask.finish();
+});
 
 export default class App extends Component {
   constructor(props) {
@@ -17,6 +28,13 @@ export default class App extends Component {
     this.getAccelerometerData(accelerometerObservable);
 
     this.state = { z: 0, status: "On" };
+  }
+
+  componentDidMount() {
+    BackgroundTask
+      .schedule
+      // timeout: 900000
+      ();
   }
 
   async getAccelerometerData(accelerometerObs) {

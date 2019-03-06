@@ -41,6 +41,7 @@
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		6C879178F22A404D9012A2A5 /* libRNSensors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C9CC7D20C47E8BB44DE83 /* libRNSensors.a */; };
 		DE53DE7325D84F4397CDB5FF /* libRCTSystemSetting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E075F2C9F9AC4F51BFA66914 /* libRCTSystemSetting.a */; };
+		44377144941948E0A45D0246 /* libRNBackgroundJob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E51463DDB41946478DDCBDF7 /* libRNBackgroundJob.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -352,6 +353,8 @@
 		5A0C9CC7D20C47E8BB44DE83 /* libRNSensors.a */ = {isa = PBXFileReference; name = "libRNSensors.a"; path = "libRNSensors.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		F0E36C5569124EBEAD3C4AB8 /* RCTSystemSetting.xcodeproj */ = {isa = PBXFileReference; name = "RCTSystemSetting.xcodeproj"; path = "../node_modules/react-native-system-setting/ios/RCTSystemSetting.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		E075F2C9F9AC4F51BFA66914 /* libRCTSystemSetting.a */ = {isa = PBXFileReference; name = "libRCTSystemSetting.a"; path = "libRCTSystemSetting.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		965ABB92A048414E90CE002F /* RNBackgroundJob.xcodeproj */ = {isa = PBXFileReference; name = "RNBackgroundJob.xcodeproj"; path = "../node_modules/react-native-background-job/ios/RNBackgroundJob.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		E51463DDB41946478DDCBDF7 /* libRNBackgroundJob.a */ = {isa = PBXFileReference; name = "libRNBackgroundJob.a"; path = "libRNBackgroundJob.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +385,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				6C879178F22A404D9012A2A5 /* libRNSensors.a in Frameworks */,
 				DE53DE7325D84F4397CDB5FF /* libRCTSystemSetting.a in Frameworks */,
+				44377144941948E0A45D0246 /* libRNBackgroundJob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +577,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				9B42030666B5406497C8CF18 /* RNSensors.xcodeproj */,
 				F0E36C5569124EBEAD3C4AB8 /* RCTSystemSetting.xcodeproj */,
+				965ABB92A048414E90CE002F /* RNBackgroundJob.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1202,11 +1207,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
 				);
 			};
 			name = Debug;
@@ -1230,11 +1237,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
 				);
 			};
 			name = Release;
@@ -1259,6 +1268,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
 				);
 			};
 			name = Debug;
@@ -1282,6 +1292,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
 				);
 			};
 			name = Release;
@@ -1313,11 +1324,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
 				);
 			};
 			name = Debug;
@@ -1349,11 +1362,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
 				);
 			};
 			name = Release;
@@ -1384,11 +1399,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
 				);
 			};
 			name = Debug;
@@ -1419,11 +1436,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sensors/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
 				);
 			};
 			name = Release;
