@@ -7,18 +7,16 @@ const Card = props => {
 
 const styles = {
   containerStyles: {
-    borderWidth: 1,
+    backgroundColor: "#2F4F4F",
     borderRadius: 2,
     borderColor: "#ddd",
     borderBottomWidth: 0,
+    justifyContent: "space-around",
     shadowColor: "#000",
     shadowOffSet: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 2,
     elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10,
     flex: 1
   }
 };

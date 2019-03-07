@@ -54,15 +54,17 @@ export default class App extends Component {
 
     return (
       <View style={container}>
-        <Header headerText="Tilt" />
         <Card>
+          <CardSection>
+            <Text style={styles.headline}>Current tilt:</Text>
+          </CardSection>
+          <CardSection>
+            <AccelerometerVisual value={degrees} />
+          </CardSection>
           <CardSection>
             <Button onPress={() => this.turnOnOffScreenBrightnessSetter()}>
               Turn Tilt {this.state.status}
             </Button>
-          </CardSection>
-          <CardSection>
-            <AccelerometerVisual title="Current tilt" value={degrees} />
           </CardSection>
         </Card>
         {this.setScreenBrightness()}
@@ -72,8 +74,15 @@ export default class App extends Component {
 }
 
 const styles = {
+  headline: {
+    fontSize: 30,
+    textAlign: "center",
+    margin: 10,
+    color: "white"
+  },
   container: {
     flex: 1,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    justifyContent: "center"
   }
 };
