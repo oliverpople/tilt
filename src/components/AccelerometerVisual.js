@@ -1,28 +1,34 @@
 import React from "react";
 import { Text, View } from "react-native";
+import ProgressCircle from "react-native-progress-circle";
 
-const AccelerometerVisual = ({ value, title }) => {
+const AccelerometerVisual = ({ value }) => {
   return (
     <View style={styles.valueContainer}>
-      <Text style={styles.headline}>{title}</Text>
-      <Text style={styles.valueValue}>{new String(value).substr(0, 4)}º</Text>
+      <ProgressCircle
+        percent={value * 1.111}
+        radius={150}
+        borderWidth={12}
+        color="#3399FF"
+        shadowColor="white"
+        bgColor="#2F4F4F"
+      >
+        <Text style={styles.progressCircleText}>
+          {new String(value).substr(0, 4)}°
+        </Text>
+      </ProgressCircle>
     </View>
   );
 };
 
 const styles = {
-  headline: {
-    fontSize: 30,
-    textAlign: "center",
-    margin: 10
-  },
   valueContainer: {
     flexDirection: "column",
     flexWrap: "wrap"
   },
-  valueValue: {
-    fontSize: 120,
-    textAlign: "center"
+  progressCircleText: {
+    fontSize: 75,
+    color: "white"
   }
 };
 
